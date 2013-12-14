@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "913D25D61856196B00707E37"
                BuildableName = "DTimer.app"
-               BlueprintName = "DTimer"
-               ReferencedContainer = "container:DTimer.xcodeproj">
+               BlueprintName = "DownTimer"
+               ReferencedContainer = "container:DownTimer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "913D25F71856196B00707E37"
                BuildableName = "DTimerTests.xctest"
-               BlueprintName = "DTimerTests"
-               ReferencedContainer = "container:DTimer.xcodeproj">
+               BlueprintName = "DownTimerTests"
+               ReferencedContainer = "container:DownTimer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "913D25D61856196B00707E37"
             BuildableName = "DTimer.app"
-            BlueprintName = "DTimer"
-            ReferencedContainer = "container:DTimer.xcodeproj">
+            BlueprintName = "DownTimer"
+            ReferencedContainer = "container:DownTimer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "913D25D61856196B00707E37"
             BuildableName = "DTimer.app"
-            BlueprintName = "DTimer"
-            ReferencedContainer = "container:DTimer.xcodeproj">
+            BlueprintName = "DownTimer"
+            ReferencedContainer = "container:DownTimer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "913D25D61856196B00707E37"
             BuildableName = "DTimer.app"
-            BlueprintName = "DTimer"
-            ReferencedContainer = "container:DTimer.xcodeproj">
+            BlueprintName = "DownTimer"
+            ReferencedContainer = "container:DownTimer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

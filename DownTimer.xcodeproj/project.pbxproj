@@ -40,23 +40,23 @@
 		30FDB55E185BE82B006BC275 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		30FDB55F185BE82B006BC275 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		30FDB56E185C5654006BC275 /* Logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Logo.icns; sourceTree = "<group>"; };
-		913D25D71856196B00707E37 /* DTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		913D25D71856196B00707E37 /* DownTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D25DA1856196B00707E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		913D25DD1856196B00707E37 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		913D25DE1856196B00707E37 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		913D25DF1856196B00707E37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		913D25E21856196B00707E37 /* DTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTimer-Info.plist"; sourceTree = "<group>"; };
+		913D25E21856196B00707E37 /* DownTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownTimer-Info.plist"; sourceTree = "<group>"; };
 		913D25E41856196B00707E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		913D25E61856196B00707E37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		913D25E81856196B00707E37 /* DTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTimer-Prefix.pch"; sourceTree = "<group>"; };
+		913D25E81856196B00707E37 /* DownTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownTimer-Prefix.pch"; sourceTree = "<group>"; };
 		913D25EA1856196B00707E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		913D25EC1856196B00707E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		913D25ED1856196B00707E37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		913D25F01856196B00707E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		913D25F21856196B00707E37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		913D25F81856196B00707E37 /* DTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		913D25F81856196B00707E37 /* DownTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DownTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D25F91856196B00707E37 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		913D26001856196B00707E37 /* DTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTimerTests-Info.plist"; sourceTree = "<group>"; };
+		913D26001856196B00707E37 /* DownTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownTimerTests-Info.plist"; sourceTree = "<group>"; };
 		913D26021856196B00707E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		913D26041856196B00707E37 /* DTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTimerTests.m; sourceTree = "<group>"; };
 		913D260E185626FD00707E37 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		913D25D81856196B00707E37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				913D25D71856196B00707E37 /* DTimer.app */,
-				913D25F81856196B00707E37 /* DTimerTests.xctest */,
+				913D25D71856196B00707E37 /* DownTimer.app */,
+				913D25F81856196B00707E37 /* DownTimerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		913D25E11856196B00707E37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				913D25E21856196B00707E37 /* DTimer-Info.plist */,
+				913D25E21856196B00707E37 /* DownTimer-Info.plist */,
 				913D25E31856196B00707E37 /* InfoPlist.strings */,
 				913D25E61856196B00707E37 /* main.m */,
-				913D25E81856196B00707E37 /* DTimer-Prefix.pch */,
+				913D25E81856196B00707E37 /* DownTimer-Prefix.pch */,
 				913D25E91856196B00707E37 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -172,7 +172,7 @@
 		913D25FF1856196B00707E37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				913D26001856196B00707E37 /* DTimerTests-Info.plist */,
+				913D26001856196B00707E37 /* DownTimerTests-Info.plist */,
 				913D26011856196B00707E37 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -181,9 +181,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		913D25D61856196B00707E37 /* DTimer */ = {
+		913D25D61856196B00707E37 /* DownTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913D26081856196B00707E37 /* Build configuration list for PBXNativeTarget "DTimer" */;
+			buildConfigurationList = 913D26081856196B00707E37 /* Build configuration list for PBXNativeTarget "DownTimer" */;
 			buildPhases = (
 				913D25D31856196B00707E37 /* Sources */,
 				913D25D41856196B00707E37 /* Frameworks */,
@@ -193,14 +193,14 @@
 			);
 			dependencies = (
 			);
-			name = DTimer;
+			name = DownTimer;
 			productName = DTimer;
-			productReference = 913D25D71856196B00707E37 /* DTimer.app */;
+			productReference = 913D25D71856196B00707E37 /* DownTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		913D25F71856196B00707E37 /* DTimerTests */ = {
+		913D25F71856196B00707E37 /* DownTimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913D260B1856196B00707E37 /* Build configuration list for PBXNativeTarget "DTimerTests" */;
+			buildConfigurationList = 913D260B1856196B00707E37 /* Build configuration list for PBXNativeTarget "DownTimerTests" */;
 			buildPhases = (
 				913D25F41856196B00707E37 /* Sources */,
 				913D25F51856196B00707E37 /* Frameworks */,
@@ -211,9 +211,9 @@
 			dependencies = (
 				913D25FD1856196B00707E37 /* PBXTargetDependency */,
 			);
-			name = DTimerTests;
+			name = DownTimerTests;
 			productName = DTimerTests;
-			productReference = 913D25F81856196B00707E37 /* DTimerTests.xctest */;
+			productReference = 913D25F81856196B00707E37 /* DownTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 913D25D21856196B00707E37 /* Build configuration list for PBXProject "DTimer" */;
+			buildConfigurationList = 913D25D21856196B00707E37 /* Build configuration list for PBXProject "DownTimer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -243,8 +243,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				913D25D61856196B00707E37 /* DTimer */,
-				913D25F71856196B00707E37 /* DTimerTests */,
+				913D25D61856196B00707E37 /* DownTimer */,
+				913D25F71856196B00707E37 /* DownTimerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 /* Begin PBXTargetDependency section */
 		913D25FD1856196B00707E37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 913D25D61856196B00707E37 /* DTimer */;
+			target = 913D25D61856196B00707E37 /* DownTimer */;
 			targetProxy = 913D25FC1856196B00707E37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -412,9 +412,10 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DTimer/DTimer-Prefix.pch";
-				INFOPLIST_FILE = "DTimer/DTimer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DTimer/DownTimer-Prefix.pch";
+				INFOPLIST_FILE = "DTimer/DownTimer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = DownTimer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,9 +425,10 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DTimer/DTimer-Prefix.pch";
-				INFOPLIST_FILE = "DTimer/DTimer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DTimer/DownTimer-Prefix.pch";
+				INFOPLIST_FILE = "DTimer/DownTimer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = DownTimer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -446,8 +448,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DTimerTests/DTimerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DTimerTests/DownTimerTests-Info.plist";
+				PRODUCT_NAME = DownTimerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -464,8 +466,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DTimer/DTimer-Prefix.pch";
-				INFOPLIST_FILE = "DTimerTests/DTimerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DTimerTests/DownTimerTests-Info.plist";
+				PRODUCT_NAME = DownTimerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -474,7 +476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		913D25D21856196B00707E37 /* Build configuration list for PBXProject "DTimer" */ = {
+		913D25D21856196B00707E37 /* Build configuration list for PBXProject "DownTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913D26061856196B00707E37 /* Debug */,
@@ -483,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913D26081856196B00707E37 /* Build configuration list for PBXNativeTarget "DTimer" */ = {
+		913D26081856196B00707E37 /* Build configuration list for PBXNativeTarget "DownTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913D26091856196B00707E37 /* Debug */,
@@ -492,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913D260B1856196B00707E37 /* Build configuration list for PBXNativeTarget "DTimerTests" */ = {
+		913D260B1856196B00707E37 /* Build configuration list for PBXNativeTarget "DownTimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913D260C1856196B00707E37 /* Debug */,
