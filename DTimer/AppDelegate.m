@@ -11,8 +11,11 @@
 #import "Constants.h"
 
 NSInteger totalSeconds;
-BOOL isRunning;
 NSTimer *timer;
+
+@interface AppDelegate()
+@property (nonatomic) BOOL timerRunning;
+@end
 
 @implementation AppDelegate
 
@@ -20,9 +23,9 @@ NSTimer *timer;
 {
     [self.mainView.textSec setStringValue:@"ff"];
     
-    isRunning = NO;
+    [self setTimerRunning:NO];
     
-    timer = NSTimer timer
+    
 
     totalSeconds = 10;
     [self updateTimer];
@@ -34,9 +37,26 @@ NSTimer *timer;
     
 }
 
+- (void)timerTick:(NSTimer *)aTimer
+{
+    NSLog(@"A second");
+    if (totalSeconds>0) {
+        totalSeconds --;
+    }
+    if (totalSeconds <= 0) {
+        [self setTimerRunning:NO];
+    }
+    [self updateTimer];
+}
+
 - (void)doubleClick:(id)sender
 {
     NSLog(@"ok double clicked");
+    if (self.timerRunning) {
+        [self setTimerRunning:NO];
+    } else {
+        [self setTimerRunning:YES];
+    }
 }
 
 - (void)changeSec:(id)sender
@@ -97,6 +117,27 @@ NSTimer *timer;
     } else {
         self.secTF.stringValue = [NSString stringWithFormat:@"0%ld", sec];
     }
+}
+
+- (void)setTimerRunning:(BOOL)timerRunning
+{
+    _timerRunning = timerRunning;
+    if (_timerRunning) {
+        if (timer) {
+            return;
+        }
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                 target:self
+                                               selector:@selector(timerTick:)
+                                               userInfo:nil
+                                                repeats:YES];
+        
+    } else {
+        [timer invalidate];
+        timer = nil;
+    }
+    
+    
 }
 
 @end
