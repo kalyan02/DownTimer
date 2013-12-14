@@ -23,28 +23,38 @@ NSTimer *timer;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    // setup status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [self.statusItem setHighlightMode:NO];
     [self.statusItem setMenu:nil];
     [self.statusItem setAction:@selector(showWindow)];
     
     
-    [self showWindow];
-    [self setTimerRunning:NO];
+    // setup timer
+    totalSeconds = 10;
     [self updateTimer];
+    [self setTimerRunning:NO];
     
+    [self showWindow];
+
+    // setup window events
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doubleClick:) name:kNotification_doubleClick object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeSec:) name:kNotification_changeSeconds object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeMin:) name:kNotification_changeMinutes object:nil];    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeMin:) name:kNotification_changeMinutes object:nil];
 }
 
 #pragma mark - Window Utilities
 
-static int numberOfShakes = 8;
-static float durationOfShake = 0.2f;
-static float vigourOfShake = 0.05f;
-- (CAKeyframeAnimation *)shakeAnimation:(NSRect)frame
+- (void)shakeWindow
 {
+    // define some animation related constants
+    static int numberOfShakes = 8;
+    static float durationOfShake = 0.2f;
+    static float vigourOfShake = 0.05f;
+    
+    CGRect frame = self.window.frame;
+    
+    // Perform animation computation
     CAKeyframeAnimation *shakeAnimation = [CAKeyframeAnimation animation];
     
     CGMutablePathRef shakePath = CGPathCreateMutable();
@@ -58,19 +68,19 @@ static float vigourOfShake = 0.05f;
     CGPathCloseSubpath(shakePath);
     shakeAnimation.path = shakePath;
     shakeAnimation.duration = durationOfShake;
-    return shakeAnimation;
+
+    // Invoke the animation
+    self.window.animations = @{ @"frameOrigin" : shakeAnimation };
+    [self.window.animator setFrameOrigin:self.window.frame.origin];
 }
 
 - (void)showWindow
 {
+    // Bring the app window to front
+    // and make it first responder
     [NSApp activateIgnoringOtherApps:YES];
     [self.window makeKeyAndOrderFront:nil];
-}
-
-- (void)shakeWindow
-{
-    self.window.animations = @{ @"frameOrigin" : [self shakeAnimation:self.window.frame] };
-    [self.window.animator setFrameOrigin:self.window.frame.origin];
+    [self.window firstResponder];
 }
 
 #pragma mark - Timer Utility
@@ -151,11 +161,7 @@ static float vigourOfShake = 0.05f;
     }
 }
 
-- (IBAction)updateSec:(id)sender {
-    NSLog(@"%@", sender);
-}
-
-- (void)updateTimer
+- (void)updateTimer //display
 {
     NSInteger sec = totalSeconds % 60;
     NSInteger min = totalSeconds / 60;

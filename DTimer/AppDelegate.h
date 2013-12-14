@@ -8,12 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MainView.h"
+#import "MainWindow.h"
 #import "NSClickableTextField.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (weak) IBOutlet NSMenu *mainMenu;
-@property (retain) IBOutlet NSWindow *window;
+@property (retain) IBOutlet MainWindow *window;
 @property (atomic, retain) MainView *mainView;
 @property (weak) IBOutlet NSClickableTextField *minTF;
 @property (weak) IBOutlet NSClickableTextField *secTF;

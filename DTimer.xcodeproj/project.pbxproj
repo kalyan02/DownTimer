@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30FDB55D185BDF8B006BC275 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FDB55C185BDF8B006BC275 /* QuartzCore.framework */; };
+		30FDB560185BE82B006BC275 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDB55F185BE82B006BC275 /* MainWindow.m */; };
 		913D25DB1856196B00707E37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D25DA1856196B00707E37 /* Cocoa.framework */; };
 		913D25E51856196B00707E37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 913D25E31856196B00707E37 /* InfoPlist.strings */; };
 		913D25E71856196B00707E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 913D25E61856196B00707E37 /* main.m */; };
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30FDB55C185BDF8B006BC275 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		30FDB55E185BE82B006BC275 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		30FDB55F185BE82B006BC275 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		913D25D71856196B00707E37 /* DTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D25DA1856196B00707E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		913D25DD1856196B00707E37 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FDB55D185BDF8B006BC275 /* QuartzCore.framework in Frameworks */,
 				913D25DB1856196B00707E37 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +108,7 @@
 		913D25D91856196B00707E37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30FDB55C185BDF8B006BC275 /* QuartzCore.framework */,
 				913D25DA1856196B00707E37 /* Cocoa.framework */,
 				913D25F91856196B00707E37 /* XCTest.framework */,
 				913D25DC1856196B00707E37 /* Other Frameworks */,
@@ -129,6 +136,8 @@
 				913D2626185B6EEA00707E37 /* NSClickableTextField.m */,
 				913D25EF1856196B00707E37 /* MainMenu.xib */,
 				913D260E185626FD00707E37 /* MainView.h */,
+				30FDB55E185BE82B006BC275 /* MainWindow.h */,
+				30FDB55F185BE82B006BC275 /* MainWindow.m */,
 				913D260F185626FD00707E37 /* MainView.m */,
 				913D25F21856196B00707E37 /* Images.xcassets */,
 				913D25E11856196B00707E37 /* Supporting Files */,
@@ -266,6 +275,7 @@
 			files = (
 				913D25EE1856196B00707E37 /* AppDelegate.m in Sources */,
 				913D2627185B6EEA00707E37 /* NSClickableTextField.m in Sources */,
+				30FDB560185BE82B006BC275 /* MainWindow.m in Sources */,
 				913D25E71856196B00707E37 /* main.m in Sources */,
 				913D2610185626FD00707E37 /* MainView.m in Sources */,
 			);
