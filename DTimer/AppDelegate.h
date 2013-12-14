@@ -12,6 +12,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (weak) IBOutlet NSMenu *mainMenu;
 @property (retain) IBOutlet NSWindow *window;
 @property (atomic, retain) MainView *mainView;
 @property (weak) IBOutlet NSClickableTextField *minTF;

@@ -9,49 +9,106 @@
 #import "AppDelegate.h"
 #import "MainView.h"
 #import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
 
 NSInteger totalSeconds;
 NSTimer *timer;
 
 @interface AppDelegate()
 @property (nonatomic) BOOL timerRunning;
+@property (nonatomic,strong) NSStatusItem *statusItem;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [self.mainView.textSec setStringValue:@"ff"];
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [self.statusItem setHighlightMode:NO];
+    [self.statusItem setMenu:nil];
+    [self.statusItem setAction:@selector(showWindow)];
     
+    
+    [self showWindow];
     [self setTimerRunning:NO];
-    
-    
-
-    totalSeconds = 10;
     [self updateTimer];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doubleClick:) name:kNotification_doubleClick object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeSec:) name:kNotification_changeSeconds object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeMin:) name:kNotification_changeMinutes object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editClick:) name:kNotification_singleClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeMin:) name:kNotification_changeMinutes object:nil];    
+}
+
+#pragma mark - Window Utilities
+
+static int numberOfShakes = 8;
+static float durationOfShake = 0.2f;
+static float vigourOfShake = 0.05f;
+- (CAKeyframeAnimation *)shakeAnimation:(NSRect)frame
+{
+    CAKeyframeAnimation *shakeAnimation = [CAKeyframeAnimation animation];
     
+    CGMutablePathRef shakePath = CGPathCreateMutable();
+    CGPathMoveToPoint(shakePath, NULL, NSMinX(frame), NSMinY(frame));
+    int index;
+    for (index = 0; index < numberOfShakes; ++index)
+    {
+        CGPathAddLineToPoint(shakePath, NULL, NSMinX(frame) - frame.size.width * vigourOfShake, NSMinY(frame));
+        CGPathAddLineToPoint(shakePath, NULL, NSMinX(frame) + frame.size.width * vigourOfShake, NSMinY(frame));
+    }
+    CGPathCloseSubpath(shakePath);
+    shakeAnimation.path = shakePath;
+    shakeAnimation.duration = durationOfShake;
+    return shakeAnimation;
+}
+
+- (void)showWindow
+{
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.window makeKeyAndOrderFront:nil];
+}
+
+- (void)shakeWindow
+{
+    self.window.animations = @{ @"frameOrigin" : [self shakeAnimation:self.window.frame] };
+    [self.window.animator setFrameOrigin:self.window.frame.origin];
+}
+
+#pragma mark - Timer Utility
+- (void)setTimerRunning:(BOOL)timerRunning
+{
+    _timerRunning = timerRunning;
+    if (_timerRunning) {
+        if (timer) {
+            return;
+        }
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                 target:self
+                                               selector:@selector(timerTick:)
+                                               userInfo:nil
+                                                repeats:YES];
+    } else {
+        [timer invalidate];
+        timer = nil;
+    }
 }
 
 - (void)timerTick:(NSTimer *)aTimer
 {
-    NSLog(@"A second");
     if (totalSeconds>0) {
         totalSeconds --;
     }
     if (totalSeconds <= 0) {
         [self setTimerRunning:NO];
+        [self showWindow];
+        [self shakeWindow];
     }
     [self updateTimer];
 }
 
+#pragma mark - User Interface Actions
+
 - (void)doubleClick:(id)sender
 {
-    NSLog(@"ok double clicked");
     if (self.timerRunning) {
         [self setTimerRunning:NO];
     } else {
@@ -74,8 +131,6 @@ NSTimer *timer;
             [self updateTimer];
         }
     }
-    
-    NSLog(@"ok scrolled by %f", deltaY);
 }
 
 - (void)changeMin:(id)sender
@@ -94,8 +149,6 @@ NSTimer *timer;
                 [self updateTimer];
             }
     }
-    
-    NSLog(@"ok scrolled by %f", deltaY);
 }
 
 - (IBAction)updateSec:(id)sender {
@@ -117,27 +170,8 @@ NSTimer *timer;
     } else {
         self.secTF.stringValue = [NSString stringWithFormat:@"0%ld", sec];
     }
-}
-
-- (void)setTimerRunning:(BOOL)timerRunning
-{
-    _timerRunning = timerRunning;
-    if (_timerRunning) {
-        if (timer) {
-            return;
-        }
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                 target:self
-                                               selector:@selector(timerTick:)
-                                               userInfo:nil
-                                                repeats:YES];
-        
-    } else {
-        [timer invalidate];
-        timer = nil;
-    }
     
-    
+    [self.statusItem setTitle:[NSString stringWithFormat:@"%@:%@", self.minTF.stringValue, self.secTF.stringValue]];
 }
 
 @end
