@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		30FDB55D185BDF8B006BC275 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FDB55C185BDF8B006BC275 /* QuartzCore.framework */; };
 		30FDB560185BE82B006BC275 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDB55F185BE82B006BC275 /* MainWindow.m */; };
+		30FDB56F185C5654006BC275 /* Logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 30FDB56E185C5654006BC275 /* Logo.icns */; };
 		913D25DB1856196B00707E37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D25DA1856196B00707E37 /* Cocoa.framework */; };
 		913D25E51856196B00707E37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 913D25E31856196B00707E37 /* InfoPlist.strings */; };
 		913D25E71856196B00707E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 913D25E61856196B00707E37 /* main.m */; };
@@ -38,6 +39,7 @@
 		30FDB55C185BDF8B006BC275 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		30FDB55E185BE82B006BC275 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		30FDB55F185BE82B006BC275 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		30FDB56E185C5654006BC275 /* Logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Logo.icns; sourceTree = "<group>"; };
 		913D25D71856196B00707E37 /* DTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D25DA1856196B00707E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		913D25DD1856196B00707E37 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +91,7 @@
 		913D25CE1856196B00707E37 = {
 			isa = PBXGroup;
 			children = (
+				30FDB56E185C5654006BC275 /* Logo.icns */,
 				913D25E01856196B00707E37 /* DTimer */,
 				913D25FE1856196B00707E37 /* DTimerTests */,
 				913D25D91856196B00707E37 /* Frameworks */,
@@ -253,6 +256,7 @@
 			files = (
 				913D25E51856196B00707E37 /* InfoPlist.strings in Resources */,
 				913D25F31856196B00707E37 /* Images.xcassets in Resources */,
+				30FDB56F185C5654006BC275 /* Logo.icns in Resources */,
 				913D25EB1856196B00707E37 /* Credits.rtf in Resources */,
 				913D25F11856196B00707E37 /* MainMenu.xib in Resources */,
 			);
@@ -406,7 +410,6 @@
 		913D26091856196B00707E37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DTimer/DTimer-Prefix.pch";
@@ -419,7 +422,6 @@
 		913D260A1856196B00707E37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DTimer/DTimer-Prefix.pch";
