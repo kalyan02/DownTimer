@@ -11,6 +11,8 @@
 #import "Constants.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import "ControlArrows.h"
+
 NSInteger totalSeconds;
 NSTimer *timer;
 
@@ -36,11 +38,20 @@ NSTimer *timer;
     [self setTimerRunning:NO];
     
     [self showWindow];
+    
+
+
+    self.secControlArrow.alphaValue = 0;
+    self.minControlArrow.alphaValue = 0;
+    
 
     // setup window events
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doubleClick:) name:kNotification_doubleClick object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeSec:) name:kNotification_changeSeconds object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeMin:) name:kNotification_changeMinutes object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toggleMinControlArrows:) name:kNotification_hoverMinutes object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toggleSecControlArrows:) name:kNotification_hoverSeconds object:nil];
 }
 
 #pragma mark - Window Utilities
@@ -116,6 +127,22 @@ NSTimer *timer;
 }
 
 #pragma mark - User Interface Actions
+
+- (void)toggleMinControlArrows:(id)sender
+{
+    NSDictionary *userInfo = [sender userInfo];
+    BOOL isEnter = [userInfo[@"type"] isEqualToString:@"enter"];
+    
+    self.minControlArrow.alphaValue = isEnter;
+}
+
+- (void)toggleSecControlArrows:(id)sender
+{
+    NSDictionary *userInfo = [sender userInfo];
+    BOOL isEnter = [userInfo[@"type"] isEqualToString:@"enter"];
+    
+    self.secControlArrow.alphaValue = isEnter;
+}
 
 - (void)doubleClick:(id)sender
 {

@@ -10,6 +10,7 @@
 		30FDB55D185BDF8B006BC275 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FDB55C185BDF8B006BC275 /* QuartzCore.framework */; };
 		30FDB560185BE82B006BC275 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDB55F185BE82B006BC275 /* MainWindow.m */; };
 		30FDB56F185C5654006BC275 /* Logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 30FDB56E185C5654006BC275 /* Logo.icns */; };
+		30FEA313185DC25D005429E2 /* ControlArrows.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FEA312185DC25D005429E2 /* ControlArrows.m */; };
 		913D25DB1856196B00707E37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D25DA1856196B00707E37 /* Cocoa.framework */; };
 		913D25E51856196B00707E37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 913D25E31856196B00707E37 /* InfoPlist.strings */; };
 		913D25E71856196B00707E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 913D25E61856196B00707E37 /* main.m */; };
@@ -40,6 +41,8 @@
 		30FDB55E185BE82B006BC275 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		30FDB55F185BE82B006BC275 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
 		30FDB56E185C5654006BC275 /* Logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Logo.icns; sourceTree = "<group>"; };
+		30FEA311185DC25D005429E2 /* ControlArrows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlArrows.h; sourceTree = "<group>"; };
+		30FEA312185DC25D005429E2 /* ControlArrows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlArrows.m; sourceTree = "<group>"; };
 		913D25D71856196B00707E37 /* DownTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D25DA1856196B00707E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		913D25DD1856196B00707E37 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,8 @@
 		913D25E01856196B00707E37 /* DTimer */ = {
 			isa = PBXGroup;
 			children = (
+				30FEA311185DC25D005429E2 /* ControlArrows.h */,
+				30FEA312185DC25D005429E2 /* ControlArrows.m */,
 				913D25EC1856196B00707E37 /* AppDelegate.h */,
 				913D25ED1856196B00707E37 /* AppDelegate.m */,
 				913D2624185B52E600707E37 /* Constants.h */,
@@ -280,6 +285,7 @@
 				913D25EE1856196B00707E37 /* AppDelegate.m in Sources */,
 				913D2627185B6EEA00707E37 /* NSClickableTextField.m in Sources */,
 				30FDB560185BE82B006BC275 /* MainWindow.m in Sources */,
+				30FEA313185DC25D005429E2 /* ControlArrows.m in Sources */,
 				913D25E71856196B00707E37 /* main.m in Sources */,
 				913D2610185626FD00707E37 /* MainView.m in Sources */,
 			);

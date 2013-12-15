@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "913D25D61856196B00707E37"
-               BuildableName = "DTimer.app"
+               BuildableName = "DownTimer.app"
                BlueprintName = "DownTimer"
                ReferencedContainer = "container:DownTimer.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "913D25F71856196B00707E37"
-               BuildableName = "DTimerTests.xctest"
+               BuildableName = "DownTimerTests.xctest"
                BlueprintName = "DownTimerTests"
                ReferencedContainer = "container:DownTimer.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "913D25D61856196B00707E37"
-            BuildableName = "DTimer.app"
+            BuildableName = "DownTimer.app"
             BlueprintName = "DownTimer"
             ReferencedContainer = "container:DownTimer.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "913D25D61856196B00707E37"
-            BuildableName = "DTimer.app"
+            BuildableName = "DownTimer.app"
             BlueprintName = "DownTimer"
             ReferencedContainer = "container:DownTimer.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "913D25D61856196B00707E37"
-            BuildableName = "DTimer.app"
+            BuildableName = "DownTimer.app"
             BlueprintName = "DownTimer"
             ReferencedContainer = "container:DownTimer.xcodeproj">
          </BuildableReference>

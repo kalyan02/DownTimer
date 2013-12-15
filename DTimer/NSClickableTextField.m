@@ -9,21 +9,9 @@
 #import "NSClickableTextField.h"
 
 @implementation NSClickableTextField
-
-//- (BOOL)acceptsFirstResponder
-//{
-//    return YES;
-//}
-//
-//- (BOOL)becomeFirstResponder
-//{
-//    return YES;
-//}
-//
-//- (BOOL)canBecomeKeyView
-//{
-//    return  YES;
-//}
+{
+    NSTrackingArea *trackArea;
+}
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -53,11 +41,37 @@
     }
 }
 
-//- (void)mouseDown:(NSEvent *)theEvent
-//{
-//    if (self.notificationName) {
-//        [[NSNotificationCenter defaultCenter] postNotificationName:self.notificationName object:nil];
-//    }
-//}
+- (void)mouseEntered:(NSEvent *)theEvent
+{
+    if (self.hoverNotificationName) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:self.hoverNotificationName
+                                                            object:nil
+                                                          userInfo:@{ @"type" : @"enter" }];
+    }
+}
 
+- (void)mouseExited:(NSEvent *)theEvent
+{
+    if (self.hoverNotificationName) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:self.hoverNotificationName
+                                                            object:nil
+                                                          userInfo:@{ @"type" : @"exit" }];
+    }
+}
+
+- (void)updateTrackingAreas
+{
+    if (trackArea!=nil) {
+        [self removeTrackingArea:trackArea];
+    }
+    
+    int opts = NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways;
+    trackArea = [[NSTrackingArea alloc] initWithRect:[self bounds]
+                                             options:opts
+                                               owner:self
+                                            userInfo:nil];
+    
+    [self addTrackingArea:trackArea];
+    
+}
 @end

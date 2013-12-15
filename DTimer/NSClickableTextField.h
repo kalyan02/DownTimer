@@ -10,4 +10,5 @@
 
 @interface NSClickableTextField : NSTextField
 @property (nonatomic, retain) NSString *notificationName;
+@property (nonatomic, retain) NSString *hoverNotificationName;
 @end

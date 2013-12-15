@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1080" identifier="macosx"/>
+        <deployment defaultVersion="1070" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
     </dependencies>
     <objects>
@@ -81,8 +81,10 @@
             <connections>
                 <outlet property="mainMenu" destination="29" id="IIX-Pa-B0y"/>
                 <outlet property="min" destination="3RT-0r-a9a" id="SvM-E8-nlg"/>
+                <outlet property="minControlArrow" destination="BgP-S8-5oz" id="EUL-Jr-njY"/>
                 <outlet property="minTF" destination="3RT-0r-a9a" id="rpe-AR-ex5"/>
                 <outlet property="sec" destination="626-ya-e0A" id="Bm9-or-yFM"/>
+                <outlet property="secControlArrow" destination="MdD-Rg-3HY" id="xjd-1H-J0d"/>
                 <outlet property="secTF" destination="626-ya-e0A" id="6RE-eO-Tex"/>
                 <outlet property="window" destination="BrZ-Mm-boZ" id="upi-pG-A7X"/>
             </connections>
@@ -98,6 +100,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="338" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdD-Rg-3HY" customClass="ControlArrows">
+                        <rect key="frame" x="179" y="8" width="96" height="119"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="626-ya-e0A" customClass="NSClickableTextField">
                         <rect key="frame" x="176" y="23" width="102" height="91"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -108,8 +114,13 @@
                         </textFieldCell>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="notificationName" value="_changeSeconds"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hoverNotificationName" value="_hoverSeconds"/>
                         </userDefinedRuntimeAttributes>
                     </textField>
+                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgP-S8-5oz" customClass="ControlArrows">
+                        <rect key="frame" x="63" y="9" width="96" height="119"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-0r-a9a" customClass="NSClickableTextField">
                         <rect key="frame" x="60" y="23" width="102" height="91"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -120,6 +131,7 @@
                         </textFieldCell>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="notificationName" value="_changeMinutes"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hoverNotificationName" value="_hoverMinutes"/>
                         </userDefinedRuntimeAttributes>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EEw-hc-E1T">
@@ -136,9 +148,15 @@
                     </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="MdD-Rg-3HY" firstAttribute="width" secondItem="BgP-S8-5oz" secondAttribute="width" id="2FK-Qw-Nhu"/>
                     <constraint firstAttribute="centerY" secondItem="626-ya-e0A" secondAttribute="centerY" id="IKe-Uc-Rj8"/>
+                    <constraint firstItem="MdD-Rg-3HY" firstAttribute="height" secondItem="BgP-S8-5oz" secondAttribute="height" id="YcY-Dh-JEE"/>
+                    <constraint firstItem="626-ya-e0A" firstAttribute="centerY" secondItem="MdD-Rg-3HY" secondAttribute="centerY" id="Ykw-Ld-pF9"/>
+                    <constraint firstItem="3RT-0r-a9a" firstAttribute="centerX" secondItem="BgP-S8-5oz" secondAttribute="centerX" id="ckT-TF-vp9"/>
                     <constraint firstAttribute="centerY" secondItem="EEw-hc-E1T" secondAttribute="centerY" id="dxL-PQ-qxv"/>
+                    <constraint firstItem="626-ya-e0A" firstAttribute="centerX" secondItem="MdD-Rg-3HY" secondAttribute="centerX" id="hAC-Qc-I6P"/>
                     <constraint firstItem="626-ya-e0A" firstAttribute="leading" secondItem="EEw-hc-E1T" secondAttribute="trailing" id="ifb-i7-IGS"/>
+                    <constraint firstItem="3RT-0r-a9a" firstAttribute="centerY" secondItem="BgP-S8-5oz" secondAttribute="centerY" id="j3e-8A-frc"/>
                     <constraint firstItem="EEw-hc-E1T" firstAttribute="centerX" secondItem="c90-J4-48y" secondAttribute="centerX" id="r26-3w-lXM"/>
                     <constraint firstAttribute="centerY" secondItem="3RT-0r-a9a" secondAttribute="centerY" id="sNO-7m-CB1"/>
                     <constraint firstItem="EEw-hc-E1T" firstAttribute="leading" secondItem="3RT-0r-a9a" secondAttribute="trailing" id="zDS-Ra-lCH"/>

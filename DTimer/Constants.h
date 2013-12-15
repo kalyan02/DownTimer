@@ -12,3 +12,6 @@
 #define kNotification_singleClick @"_singleClick"
 #define kNotification_changeSeconds @"_changeSeconds"
 #define kNotification_changeMinutes @"_changeMinutes"
+
+#define kNotification_hoverSeconds @"_hoverSeconds"
+#define kNotification_hoverMinutes @"_hoverMinutes"
