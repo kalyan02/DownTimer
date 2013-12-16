@@ -37,7 +37,7 @@
     if (self.notificationName) {
         [[NSNotificationCenter defaultCenter] postNotificationName:self.notificationName
                                                             object:nil
-                                                          userInfo:@{ @"deltaY" : @(theEvent.deltaY) }];
+                                                          userInfo:@{ @"deltaY" : @(theEvent.deltaY * (theEvent.isDirectionInvertedFromDevice?-1:1)) }];
     }
 }
 
